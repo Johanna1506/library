@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Librairie</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Ma Bibliotheque</h1>
+    <nav>
+        <a href="{{ path('accueil') }}">Accueil</a>
+        <a href="{{ path('authors_controller') }}">Auteurs</a>
+        <a href="{{ path('books_controller') }}">Livres</a>
+    </nav>
+</header>

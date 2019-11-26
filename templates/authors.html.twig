@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section>
+        <form action="GET">
+           <input type="text" class="form_search">
+            <a href=""><input type="submit" value="Ok"></a>
+        </form>
+        <ul>
+        {% for author in authors %}
+                <li>
+                    <h2>{{ author.firstName }} {{ author.name }}</h2>
+                    <a href="{{ path('author_controller', {'id': author.id }) }}"><input type="submit" value="Voir plus"></a>
+                </li>
+         {% endfor %}
+        </ul>
+    </section>
+
+{% endblock %}

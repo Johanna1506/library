@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+        <article class="article_book">
+            <div class="article">
+                <div class="title">{{ book.title }}</div>
+                <p class="style">Style du livre : {{ book.style }}.</p>
+                <p>Livre disponible : {% if  book.instock %} oui {% else %} non {% endif %}</p>
+                <p class="description">{{ book.description }}</p>
+            </div>
+            <div class="couverture">
+                <img src="{{ asset('img/couvertures/'~book.id~'.jpeg')}}" alt="couverture livre" class="resp">
+            </div>
+        </article>
+
+{% endblock %}

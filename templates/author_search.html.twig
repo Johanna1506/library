@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+   <section>
+      <ul>
+          {% for author in authors  %}
+              <section class="section_author">
+                  <div>
+                      <h2>{{ author.firstName }} {{ author.name }} </h2>
+                      <p>né(e) le {{ author.birthDate | date('d/m/y') }} {% if author.deathDate is not null %} et décedé(e) le {{ author.deathDate | date('d/m/y') }}{% endif %}</p>
+                      <p>{{ author.biographie }}</p>
+                      <a href="{{ path('authors_controller') }}"><input type="submit" value="Retour à la liste des auteurs" class="retour_auteurs"></a>
+                  </div>
+                  <div class="image_auteur"><img src="{{ asset('img/auteurs/'~author.id~'.jpeg')}}" alt="auteurs" class="resp"></div>
+              </section>
+
+          {% endfor %}
+      </ul>
+   </section>
+
+{% endblock %}

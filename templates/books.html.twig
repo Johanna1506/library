@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <section>
+        <ul>
+    {% for book in books %}
+            <li><div class="image_books">
+                    <img src="{{ asset('img/couvertures/'~book.id~'.jpeg')}}" alt="image couverture" class="resp">
+                </div>
+               <div>
+                   <div class="title">{{ book.title }}</div>
+                   <div class="dispo">Livre disponible : {% if  book.instock %} oui {% else %} non {% endif %}</div>
+               </div>
+                <a href="{{ path('book_controller', {'id': book.id }) }}"><input type="submit" value="Voir plus"></a>
+            </li>
+    {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

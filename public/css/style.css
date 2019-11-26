@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #313131;
+
+}
+.resp{
+    width: 100%;
+    height: auto;
+}
+body{
+    background-image: url("../img/fondecran.jpg");
+}
+header{
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+h2{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+ul{
+    width: 70%;
+    margin: 10px auto;
+    list-style: none;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li:nth-child(odd){
+    background-color: rgba(229, 229, 229, 0.7);
+}
+li:nth-child(even){
+    background-color: rgba(132, 132, 132, 0.7);
+
+}
+.image_books{
+    width: 50px;
+    margin-right: 40px;
+}
+.image_auteur{
+    width: 1000px;
+}
+.title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.dispo{
+    font-size: 12px;
+    text-align: center;
+}
+.style{
+    font-size: 12px;
+    font-style: italic;
+}
+.article_book{
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+article{
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+.couverture{
+    width: 1000px;
+    margin: 10px;
+}
+section{
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+.section_author{
+    display: flex;
+    align-items: center;
+}
+.article{
+    margin: 10px;
+}
+
+form{
+    margin-left: 175px;
+}
+input{
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    color: rgba(214,244,255,1);
+    background: rgba(122,175,226,1);
+    margin-right: 2px;
+}
+.retour_auteurs{
+    margin-top: 70px;
+}
+
