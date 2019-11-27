@@ -6,11 +6,15 @@
             <li><div class="image_books">
                     <img src="{{ asset('img/couvertures/'~book.id~'.jpeg')}}" alt="image couverture" class="resp">
                 </div>
-               <div>
+               <div class="books_col2">
                    <div class="title">{{ book.title }}</div>
                    <div class="dispo">Livre disponible : {% if  book.instock %} oui {% else %} non {% endif %}</div>
                </div>
-                <a href="{{ path('book_controller', {'id': book.id }) }}"><input type="submit" value="Voir plus"></a>
+                <div class="books_col3">
+                    <a href="{{ path('book_controller', {'id': book.id }) }}"><input type="submit" value="Voir plus"></a>
+                    <a href="{{ path('book_delete', {'id': book.id }) }}"><input type="submit" value="Supprimer"></a>
+                    <a href="{{ path('book_update', {'id': book.id }) }}"><input type="submit" value="Modifier"></a>
+                </div>
             </li>
     {% endfor %}
         </ul>

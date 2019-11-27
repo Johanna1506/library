@@ -2,10 +2,12 @@
 {% block content %}
         <article class="article_book">
             <div class="article">
+                <h3>{% if new_book is defined %} {{ new_book }} {% endif %}</h3>
                 <div class="title">{{ book.title }}</div>
                 <p class="style">Style du livre : {{ book.style }}.</p>
                 <p>Livre disponible : {% if  book.instock %} oui {% else %} non {% endif %}</p>
                 <p class="description">{{ book.description }}</p>
+                <p>Id : {{ book.id }}</p>
             </div>
             <div class="couverture">
                 <img src="{{ asset('img/couvertures/'~book.id~'.jpeg')}}" alt="couverture livre" class="resp">

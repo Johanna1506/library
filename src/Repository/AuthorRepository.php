@@ -19,6 +19,8 @@ class AuthorRepository extends ServiceEntityRepository
         parent::__construct($registry, Author::class);
     }
 
+    // methode pour rechercher un auteur grace a un mot dans la bio
+
     public function getByWord($word){
         $queryBuilder = $this->createQueryBuilder('a');
 

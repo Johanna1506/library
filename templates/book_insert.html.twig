@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <article class="article_book_insert">
+        <form action="{{ path('book_insert') }}" method="post">
+            <div class="title">
+                <label for="title">Titre</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="style">
+                <label for="style">Style du livre</label>
+                <input type="text" name="style" id="style">
+            </div>
+            <div class="inStock">
+                <label for="inStock">livre en stock</label>
+                <select name="inStock" id="inStock">
+                    <option value="oui">oui</option>
+                    <option value="non">non</option>
+                </select>
+            </div>
+            <div class="nbPage">
+                <label for="nbPages">Nombre de pages</label>
+                <input type="text" name="nbPages" id="nbPages">
+            </div>
+            <div class="description">
+                <label for="description">Description du livre</label>
+                <input type="text" name="description" id="description">
+            </div>
+            <a href="{{ path('book_insert') }}"><input type="submit"></a>
+        </form>
+    </article>
+
+{% endblock %}

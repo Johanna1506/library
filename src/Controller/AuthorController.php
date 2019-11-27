@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Repository\AuthorRepository;
 use App\Repository\BookRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 class AuthorController extends AbstractController
@@ -41,6 +42,20 @@ class AuthorController extends AbstractController
         return $this->render('authors.html.twig',[
             'authors' => $authors]);
 
+    }
+
+    /**
+     * @Route("/author_delete", name="author_delete")
+     */
+    public function deleteAuthor(BookRepository $authorRepository, EntityManagerInterface $entityManager)
+    {
+        // Je récupère un enregistrement book en BDD grâce au repository de book
+        $author = $authorRepository->find(2);
+        // j'utilise l'entity manager avec la méthode remove pour enregistrer
+        // la suppression du book dans l'unité de travail
+        $entityManager->remove($author);
+        // je valide la suppression en bdd avec la méthode flush
+        $entityManager->flush();
     }
 
 

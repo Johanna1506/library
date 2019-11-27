@@ -41,20 +41,18 @@ li{
     justify-content: space-between;
     align-items: center;
 }
-li:nth-child(odd){
-    background-color: rgba(229, 229, 229, 0.7);
-}
 li:nth-child(even){
     background-color: rgba(132, 132, 132, 0.7);
 
 }
 .image_books{
-    width: 50px;
-    margin-right: 40px;
+    width: 10%;
+
 }
 .image_auteur{
     width: 1000px;
 }
+
 .title{
     font-size: 20px;
     margin-bottom: 10px;
@@ -107,7 +105,7 @@ form{
 }
 input{
     display: inline-block;
-    padding: 5px 15px;
+    padding: 2px 15px;
     font-size: 14px;
     border: 1px solid #b7b7b7;
     border-radius: 5px;
@@ -117,5 +115,8 @@ input{
 }
 .retour_auteurs{
     margin-top: 70px;
+}
+.article_book_insert input {
+    padding: 2px 10px;
 }
 

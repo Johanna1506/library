@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <article class="article_book">
+
+        {% if book_delete is defined %}
+            <p>{{ book_delete }}</p>
+        {% endif %}
+
+        {% if book_update is defined %}
+            <p>{{ book_update }}</p>
+        {% endif %}
+
+        <a href="{{ path('books_controller') }}"><input type="submit" value="Retour à la liste des livres" class="retour_livres"></a>
+    </article>
+
+{% endblock %}
